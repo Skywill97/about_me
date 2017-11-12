@@ -1,5 +1,12 @@
 'use strict';
 
+function userName() {
+  var name = prompt('Welcome to my page! Whats your name?');
+  alert('Hi! ' + name + ' lets play a quick gussing game!');
+  console.log('name', name);
+}
+userName();
+
 function question1() {
   var sport = prompt('Is my preferred sport Basketball?').toLowerCase();
   console.log('preferred sport', sport);
