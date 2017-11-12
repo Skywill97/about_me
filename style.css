@@ -1,32 +1,38 @@
 body {
-  background-color: black; }
+  background-image: url(assets/sky.png); }
 
   h1 {
     color: white;
-    font-family: sans-serif; font-weight: bold; text-align: center; font-size: 450%; }
-    h3{
-      color: white;
-    }
-    h2 { color: white;
+    font-family: cursive; font-weight: bolder; text-align: center; font-size: 450%;
 
-    }
-li {
-  color: white;
-}
-    header {
-      background-color: red;
-      height: 85px;
-    }
-    main {
-  position: relative;
-}
+  }
+  h3 {
+    font-size: 100%
+    font-family: monospace;
+    font-style: italic;
+    color: white;
 
-footer {
-  position: fixed;
-bottom: 0;
-width: 100%;
-background-color: black;
-color: white;
-text-align: center;
-z-index: 10;
-}
+
+  }
+
+  ul, li {
+    font-family: cursive;
+    color: white;
+    list-style-type: none;
+  }
+  header {
+
+  }
+  main {
+    position: relative;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    z-index: 10;
+  }
