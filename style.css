@@ -1,15 +1,21 @@
 body {
   background-image: url(assets/sky.png); }
 div {
+  text-align: center;
   font-style: italic;
   font-family: fantasy;
   font-size: 150%
+
 }
   h1 {
     color: white;
     font-family: sans-serif; font-weight: bolder; text-align: center; font-size: 450%;
 border-style: groove;
 border-radius: 200px
+  }
+  h2 {
+text-align: center;
+
   }
   h3 {
     font-size: 100%
@@ -18,6 +24,9 @@ border-radius: 200px
     color: white;
 
 
+  }
+  a {
+    color: red;
   }
 
   ul, li {
@@ -33,11 +42,11 @@ border-radius: 200px
   }
 
   footer {
-    position: fixed;
+    left: 12px;
     bottom: 0;
+    height: 5%;
     width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
+    color: red;
+    text-align: left;
     z-index: 10;
   }
