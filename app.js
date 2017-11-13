@@ -1,8 +1,10 @@
 'use strict';
 
+var score = 0;
+console.log('score', score);
 function userName() {
   var name = prompt('Welcome to my page! Whats your name?');
-  alert('Hi! ' + name + ' lets play a quick gussing game!');
+  alert('Hi! ' + name +'! Lets play a quick gussing game!');
   console.log('name', name);
 }
 userName();
@@ -13,6 +15,7 @@ function question1() {
   if(sport === 'yes' || sport === 'y') {
     console.log('true', sport);
     alert('It is!');
+    score++;
   } else {
     console.log('false', sport);
     alert('Wrong! It is Basketball!');
@@ -26,6 +29,7 @@ function question2() {
   if(state === 'yes' || state === 'y') {
     console.log('true', state);
     alert('Correct!');
+    score++;
   } else {
     console.log('false', state);
     alert('Wrong! I was!');
@@ -42,6 +46,7 @@ function question3() {
   } else {
     console.log('false', favGenre);
     alert('Its not! Its Rock/Metal!');
+    score++;
   }
 }
 question3();
@@ -52,6 +57,7 @@ function question4() {
   if (tvSeries === 'yes' || tvSeries === 'y') {
     console.log('true', tvSeries);
     alert('Thats right!');
+    score++;
   } else {
     console.log('false', tvSeries);
     alert('Wrong! I am!');
@@ -68,6 +74,54 @@ function question5() {
   } else {
     console.log('false', favColor);
     alert('Its not! Its red!');
+    score++;
   }
 }
 question5();
+
+function question6() {
+  var age = 20;
+  while(age > 0) {
+    var guessAge = prompt('Can you guess how old I am?');
+    console.log('guess age', guessAge);
+    guessAge = parseInt(guessAge);
+    if (guessAge === age) {
+      alert('Correct!!');
+      score++;
+      break;
+    }
+    else if (guessAge > 20){
+      console.log('too high', guessAge);
+      alert('You guessed too high!');
+      break;
+    } else {
+      (guessAge < 20);
+      console.log('too low');
+      alert('You guessed too low!');
+      break;
+
+    }
+
+  }
+}
+
+question6();
+
+function question7() {
+  var states = ['Colorado', 'Washington', 'Wyoming', 'California', 'Arizona', 'Tennessee'];
+  if(guessState !== states[0] && guessState !== states[1] && guessState !== states[2] && guessState !== states[3] && guessState !== states[4] && guessState !== states[5]) {
+    var guessState = prompt('Can you guess whats states have popular national parks?').toLowerCase();
+    console.log('what states', guessState);
+    alert('Correct! The states were: '+ states[0] +', '+ states[1] +', '+ states[2] +', '+ states[3] +', '+ states[4] +' and '+ states[5] +'!');
+    score++;
+  }
+  else {
+    console('wrong guess');
+    alert('wrong! The correct states were: '+ states[0] +', '+ states[1] +', '+ states[2] +', '+ states[3] +', '+ states[4] +' and '+ states[5] +'!');
+  }
+}
+
+question7();
+
+console.log('score');
+alert('Thanks for playing '+ name +'! You got ' + score + ' out of 7 correct!');
