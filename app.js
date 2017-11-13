@@ -1,5 +1,6 @@
 'use strict';
-
+var uName = name;
+console.log('name of user', uName);
 var score = 0;
 console.log('score', score);
 function userName() {
@@ -110,18 +111,19 @@ question6();
 function question7() {
   var states = ['Colorado', 'Washington', 'Wyoming', 'California', 'Arizona', 'Tennessee'];
   if(guessState !== states[0] && guessState !== states[1] && guessState !== states[2] && guessState !== states[3] && guessState !== states[4] && guessState !== states[5]) {
-    var guessState = prompt('Can you guess whats states have popular national parks?').toLowerCase();
+    var guessState = prompt('Can you guess a state that has a popular national park?').toLowerCase();
     console.log('what states', guessState);
     alert('Correct! The states were: '+ states[0] +', '+ states[1] +', '+ states[2] +', '+ states[3] +', '+ states[4] +' and '+ states[5] +'!');
     score++;
   }
   else {
-    console('wrong guess');
+    console.log('wrong state', guessState);
     alert('wrong! The correct states were: '+ states[0] +', '+ states[1] +', '+ states[2] +', '+ states[3] +', '+ states[4] +' and '+ states[5] +'!');
+
   }
 }
 
 question7();
 
 console.log('score');
-alert('Thanks for playing '+ name +'! You got ' + score + ' out of 7 correct!');
+alert('Thanks for playing! You got ' + score + ' out of 7 correct!');
