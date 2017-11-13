@@ -78,51 +78,46 @@ function question5() {
     score++;
   }
 }
+
 question5();
 
 function question6() {
-  var age = 20;
-  while(age > 0) {
-    var guessAge = prompt('Can you guess how old I am?');
-    console.log('guess age', guessAge);
-    guessAge = parseInt(guessAge);
-    if (guessAge === age) {
+  for(var i = 0; i < 4; i++) {
+    var age = prompt('Can you guess how old I am?');
+    console.log('age', age);
+    if (age === '20') {
+      console.log('true', age);
       alert('Correct!!');
       score++;
       break;
-    }
-    else if (guessAge > 20){
-      console.log('too high', guessAge);
-      alert('You guessed too high!');
+    } else if(age > 20) {
+      console.log('too high', age);
+      alert('Too high! Try again!');
       break;
     } else {
-      (guessAge < 20);
-      console.log('too low');
-      alert('You guessed too low!');
-      break;
-
+      (age < 20);
+      console.log('too low', age);
+      alert('Too low! Try again!');
     }
-
   }
 }
-
 question6();
-
 function question7() {
-  var states = ['Colorado', 'Washington', 'Wyoming', 'California', 'Arizona', 'Tennessee'];
-  if(guessState !== states[0] && guessState !== states[1] && guessState !== states[2] && guessState !== states[3] && guessState !== states[4] && guessState !== states[5]) {
-    var guessState = prompt('Can you guess a state that has a popular national park?').toLowerCase();
-    console.log('what states', guessState);
-    alert('Correct! The states were: '+ states[0] +', '+ states[1] +', '+ states[2] +', '+ states[3] +', '+ states[4] +' and '+ states[5] +'!');
-    score++;
-  }
-  else {
-    console.log('wrong state', guessState);
-    alert('wrong! The correct states were: '+ states[0] +', '+ states[1] +', '+ states[2] +', '+ states[3] +', '+ states[4] +' and '+ states[5] +'!');
-
+  var stateParks = ['Colorado', 'Washington', 'Wyoming', 'California', 'Arizona', 'Tennessee'];
+  for (var i = 6; i > 0; i--) {
+    var parkGuess = prompt('Can you guess a state that has a popular national park?').toLowerCase();
+    console.log(stateParks[i]);
+    if (stateParks.includes(parkGuess)) {
+      console.log('correct guess', stateParks);
+      alert('Correct!');
+      score++;
+      break;
+    } else {
+      console.log('false', parkGuess);
+      alert('Wrong! Try again!');
+    }
   }
 }
-
 question7();
 
 console.log('score');
