@@ -11,7 +11,7 @@ function userName() {
 userName();
 
 function question1() {
-  var sport = prompt('Is my preferred sport Basketball?').toLowerCase();
+  var sport = prompt('Question 1: Is my preferred sport Basketball?').toLowerCase();
   console.log('preferred sport', sport);
   if(sport === 'yes' || sport === 'y') {
     console.log('true', sport);
@@ -25,7 +25,7 @@ function question1() {
 question1();
 
 function question2() {
-  var state = prompt('Was I born in Washington?').toLowerCase();
+  var state = prompt('Question 2: Was I born in Washington?').toLowerCase();
   console.log('birth state', state);
   if(state === 'yes' || state === 'y') {
     console.log('true', state);
@@ -39,7 +39,7 @@ function question2() {
 question2();
 
 function question3() {
-  var favGenre = prompt('Is Jazz my favorite genre of music?').toLowerCase();
+  var favGenre = prompt('Question 3: Is Jazz my favorite genre of music?').toLowerCase();
   console.log('favorite genre of music', favGenre);
   if(favGenre === 'yes' || favGenre === 'y') {
     console.log('true', favGenre);
@@ -53,7 +53,7 @@ function question3() {
 question3();
 
 function question4() {
-  var tvSeries = prompt('Am I currently watching Breaking Bad on Netflix?').toLowerCase();
+  var tvSeries = prompt('Question 4: Am I currently watching Breaking Bad on Netflix?').toLowerCase();
   console.log('tv series i am currently watching', tvSeries);
   if (tvSeries === 'yes' || tvSeries === 'y') {
     console.log('true', tvSeries);
@@ -67,7 +67,7 @@ function question4() {
 question4();
 
 function question5() {
-  var favColor = prompt('Is my favorite color green?').toLowerCase();
+  var favColor = prompt('Question 5: Is my favorite color green?').toLowerCase();
   console.log('favorite colors', favColor);
   if (favColor === 'yes' || favColor === 'y' ) {
     console.log('true', favColor);
@@ -80,10 +80,10 @@ function question5() {
 }
 
 question5();
-
+var i = 3;
 function question6() {
-  for(var i = 0; i < 4; i++) {
-    var age = prompt('Can you guess how old I am?');
+  while(i > 0) {
+    var age = prompt('Question 6: Can you guess how old I am?');
     console.log('age', age);
     if (age === '20') {
       console.log('true', age);
@@ -93,32 +93,39 @@ function question6() {
     } else if(age > 20) {
       console.log('too high', age);
       alert('Too high! Try again!');
-      break;
-    } else {
-      (age < 20);
+      i--;
+    } else if (age < 20) {
       console.log('too low', age);
       alert('Too low! Try again!');
+      i--;
     }
   }
 }
 question6();
 function question7() {
-  var stateParks = ['Colorado', 'Washington', 'Wyoming', 'California', 'Arizona', 'Tennessee'];
-  for (var i = 6; i > 0; i--) {
-    var parkGuess = prompt('Can you guess a state that has a popular national park?').toLowerCase();
+  var stateParks = ['colorado', 'washington', 'wyoming', 'california', 'arizona', 'tennessee'];
+  var i = 6;
+  while (i > 0, i--) {
+    var parkGuess = prompt('Question 7: you guess a state that has a popular national park?').toLowerCase();
     console.log(stateParks[i]);
     if (stateParks.includes(parkGuess)) {
       console.log('correct guess', stateParks);
       alert('Correct!');
       score++;
       break;
-    } else {
+    } else if (i < 0) {
       console.log('false', parkGuess);
       alert('Wrong! Try again!');
+      break;
     }
   }
 }
 question7();
-
+alert('The correct answers were: Colorado, Washington, Wyoming, California, Arizona, Tennessee.');
 console.log('score');
-alert('Thanks for playing! You got ' + score + ' out of 7 correct!');
+if(score > 6) {
+  alert('WOW '+ name +'! You got them all right!!');
+}
+else if (score < 6) {
+  alert('Thanks for playing! You got '+ score +' out of 7');
+}
