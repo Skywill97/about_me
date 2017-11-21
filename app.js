@@ -78,10 +78,10 @@ function question5() {
     score++;
   }
 }
-
 question5();
-var i = 3;
+
 function question6() {
+  var i = 3;
   while(i > 0) {
     var age = prompt('Question 6: Can you guess how old I am?');
     console.log('age', age);
@@ -102,6 +102,7 @@ function question6() {
   }
 }
 question6();
+
 function question7() {
   var stateParks = ['colorado', 'washington', 'wyoming', 'california', 'arizona', 'tennessee'];
   var i = 6;
