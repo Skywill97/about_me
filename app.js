@@ -115,7 +115,6 @@ function question7() {
       score++;
       break;
     } else if (i < 0) {
-      console.log('false', parkGuess);
       alert('Wrong! Try again!');
       break;
     }
@@ -125,7 +124,7 @@ question7();
 alert('The correct answers were: Colorado, Washington, Wyoming, California, Arizona, Tennessee.');
 console.log('score');
 if(score > 6) {
-  alert('WOW '+ name +'! You got them all right!!');
+  alert('WOW! You got them all right!!');
 }
 else if (score < 6) {
   alert('Thanks for playing! You got '+ score +' out of 7');
